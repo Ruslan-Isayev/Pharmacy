@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Ruslan</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <h1>salam</h1>
