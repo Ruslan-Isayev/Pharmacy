@@ -10,6 +10,10 @@
 </head>
 <body>
 
+<div class="header">
+    <h1>ePharmacy</h1>
+</div>
+
 <div class="button-container">
     <button class="button department-btn">Department</button>
     <button class="button manufacturer-btn">Manufacturer</button>
