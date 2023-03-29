@@ -15,17 +15,16 @@
 </div>
 
 <div class="button-container">
-    <button class="button department-btn">Department</button>
-    <button class="button manufacturer-btn">Manufacturer</button>
-    <button class="button medications-btn">Medications</button>
-    <button class="button patients-btn">Patients</button>
-    <button class="button prescriptions-btn">Prescriptions</button>
-    <button class="button payments-btn">Payments</button>
-    <button class="button inventory-btn">Inventory</button>
-    <button class="button jobs-btn">Jobs</button>
-    <button class="button orders-btn">Orders</button>
-    <button class="button employees-btn">Employees</button>
-    <button class="button view-btn">View</button>
+    <a href="cs?action=getDepartmentList"><input type="button" class="button department-btn" value="Department" id="departmentDataBtnId"></a>
+    <a href="cs?action=getMedicationsList"><input type="button" class="button medications-btn" value="Medications" id="medicationsDataBtnId"></a>
+    <a href="cs?action=getPatientsList"><input type="button" class="button patients-btn" value="Patients" id="patientsDataBtnId"></a>
+    <a href="cs?action=getPrescriptionsList"><input type="button" class="button prescriptions-btn" value="Prescriptions" id="prescriptionsDataBtnId"></a>
+    <a href="cs?action=getPaymentsList"><input type="button" class="button payments-btn" value="Payments" id="paymentsDataBtnId"></a>
+    <a href="cs?action=getInventoryList"><input type="button" class="button inventory-btn" value="Inventory" id="inventoryDataBtnId"></a>
+    <a href="cs?action=getJobsList"><input type="button" class="button jobs-btn" value="Jobs" id="jobsDataBtnId"></a>
+    <a href="cs?action=getOrdersList"><input type="button" class="button orders-btn" value="Orders" id="ordersDataBtnId"></a>
+    <a href="cs?action=getEmployeesList"><input type="button" class="button employees-btn" value="Employees" id="employeesDataBtnId"></a>
+    <a href="cs?action=getViewList"><input type="button" class="button view-btn" value="View" id="viewDataBtnId"></a>
 </div>
 
 </body>
