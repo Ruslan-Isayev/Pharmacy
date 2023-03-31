@@ -1,6 +1,8 @@
 package com.javaee.controller;
+
 import java.io.*;
 import java.sql.Connection;
+
 import com.javaee.dao.DbHelper;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -40,7 +42,7 @@ public class ControllerServlet extends HttpServlet {
                     }
 
                 } else if (action.equalsIgnoreCase("getMedicationsList")) {
-                    out.write("<h1>getMedications List</h1>");
+                    out.write("<h1>Medications List</h1>");
                 } else if (action.equalsIgnoreCase("getPatientsList")) {
                     out.write("<h1>Patients List</h1>");
                 } else if (action.equalsIgnoreCase("getPrescriptionsList")) {
@@ -53,8 +55,8 @@ public class ControllerServlet extends HttpServlet {
                     out.write("<h1>Jobs List</h1>");
                 } else if (action.equalsIgnoreCase("getOrdersList")) {
                     out.write("<h1>Orders List</h1>");
-                } else if (action.equalsIgnoreCase("getEmployeeList")) {
-                    out.write("<h1>Employee List</h1>");
+                } else if (action.equalsIgnoreCase("getEmployeesList")) {
+                    out.write("<h1>Employees List</h1>");
                 } else if (action.equalsIgnoreCase("getViewList")) {
                     out.write("<h1>View List</h1>");
                 }
