@@ -2,8 +2,14 @@ package com.javaee.controller;
 
 import java.io.*;
 import java.sql.Connection;
+import java.util.List;
 
 import com.javaee.dao.DbHelper;
+import com.javaee.dao.DepartmentDao;
+import com.javaee.dao.DepartmentDaoImpl;
+import com.javaee.model.Department;
+import com.javaee.service.DepartmentService;
+import com.javaee.service.DepartmentServiceImpl;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -21,7 +27,8 @@ public class ControllerServlet extends HttpServlet {
     public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-
+        DepartmentDao departmentDao = new DepartmentDaoImpl();
+        DepartmentService departmentService = new DepartmentServiceImpl(departmentDao);
         try {
             if (request.getParameter("action") != null) {
                 String action = request.getParameter("action");
@@ -33,13 +40,9 @@ public class ControllerServlet extends HttpServlet {
                     out.write("<h1>Success</h1>");
                     out.write("Welcome " + name + " " + surname);
                 } else if (action.equalsIgnoreCase("getDepartmentList")) {
-                    Connection c = DbHelper.getConnection();
-                    if (c != null) {
-                        out.write("<h1>Success</h1>");
-                        out.write("<h1>Department List</h1>");
-                    } else {
-                        out.write("<h1>Failed</h1>");
-                    }
+                    List<Department> departmentList = departmentService.getDepartmentList();
+                    request.setAttribute("departmentList", departmentList);
+                    request.getRequestDispatcher("WEB-INF/pages/departmentList.jsp").forward(request, response);
 
                 } else if (action.equalsIgnoreCase("getMedicationsList")) {
                     out.write("<h1>Medications List</h1>");
